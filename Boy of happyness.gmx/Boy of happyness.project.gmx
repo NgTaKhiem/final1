@@ -8,13 +8,14 @@
   <sprites name="sprites">
     <sprites name="s_boy">
       <sprite>sprites\s_boy_idle</sprite>
-      <sprite>sprites\s_boy_walk</sprite>
+      <sprite>sprites\s_boy_run</sprite>
     </sprites>
     <sprite>sprites\s_street</sprite>
     <sprite>sprites\s_milk</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\background1</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
@@ -23,6 +24,7 @@
     <script>scripts\sc_input.gml</script>
     <script>scripts\sc_idle.gml</script>
     <script>scripts\sc_run.gml</script>
+    <script>scripts\sc_jump.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\o_boy</object>
@@ -30,6 +32,7 @@
     <object>objects\o_milk</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_playing_2</room>
     <room>rooms\room_playing1_</room>
   </rooms>
   <help>

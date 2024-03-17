@@ -20,15 +20,15 @@
   <width>115</width>
   <height>164</height>
   <frames>
-    <frame index="0">images\s_boy_walk_0.png</frame>
-    <frame index="1">images\s_boy_walk_1.png</frame>
-    <frame index="2">images\s_boy_walk_2.png</frame>
-    <frame index="3">images\s_boy_walk_3.png</frame>
-    <frame index="4">images\s_boy_walk_4.png</frame>
-    <frame index="5">images\s_boy_walk_5.png</frame>
-    <frame index="6">images\s_boy_walk_6.png</frame>
-    <frame index="7">images\s_boy_walk_7.png</frame>
-    <frame index="8">images\s_boy_walk_8.png</frame>
-    <frame index="9">images\s_boy_walk_9.png</frame>
+    <frame index="0">images\s_boy_run_0.png</frame>
+    <frame index="1">images\s_boy_run_1.png</frame>
+    <frame index="2">images\s_boy_run_2.png</frame>
+    <frame index="3">images\s_boy_run_3.png</frame>
+    <frame index="4">images\s_boy_run_4.png</frame>
+    <frame index="5">images\s_boy_run_5.png</frame>
+    <frame index="6">images\s_boy_run_6.png</frame>
+    <frame index="7">images\s_boy_run_7.png</frame>
+    <frame index="8">images\s_boy_run_8.png</frame>
+    <frame index="9">images\s_boy_run_9.png</frame>
   </frames>
 </sprite>

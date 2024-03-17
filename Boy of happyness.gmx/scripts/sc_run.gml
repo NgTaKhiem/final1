@@ -1,6 +1,6 @@
 sc_input();
 
-sprite_index = s_king_run;
+sprite_index = s_boy_run;
 
 moveX = (pressD - pressA) * spd;
 
@@ -11,8 +11,4 @@ if (pressD + pressA == 0) {
 if (pressW and jumpcount < jumpmax) {
     moveY = -10;
     jumpcount++;
-}
-
-if (pressSpace) {
-    state = states.attack
 }
