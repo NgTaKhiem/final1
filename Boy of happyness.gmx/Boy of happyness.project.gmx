@@ -6,9 +6,12 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprites name="s_boy">
+    <sprites name="s_assasin">
       <sprite>sprites\s_boy_idle</sprite>
       <sprite>sprites\s_boy_run</sprite>
+      <sprite>sprites\s_boy_jump</sprite>
+      <sprite>sprites\s_boy_highjump</sprite>
+      <sprite>sprites\s_boy_attack</sprite>
     </sprites>
     <sprite>sprites\s_street</sprite>
     <sprite>sprites\s_milk</sprite>
@@ -24,16 +27,19 @@
     <script>scripts\sc_input.gml</script>
     <script>scripts\sc_idle.gml</script>
     <script>scripts\sc_run.gml</script>
+    <script>scripts\sc_attack.gml</script>
     <script>scripts\sc_jump.gml</script>
+    <script>scripts\script5.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\o_boy</object>
-    <object>objects\o_drit</object>
+    <object>objects\o_solid</object>
     <object>objects\o_milk</object>
+    <object>objects\o_damaged</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_playing_2</room>
     <room>rooms\room_playing1_</room>
+    <room>rooms\room_playing_2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

@@ -1,14 +1,13 @@
 sc_input();
+spd = 3;
 
 sprite_index = s_boy_run;
-
 moveX = (pressD - pressA) * spd;
-
 if (pressD + pressA == 0) {
     state = states.idle;
 }
-
-if (pressW and jumpcount < jumpmax) {
+else if (pressW and global.counter < 2) {
     moveY = -10;
-    jumpcount++;
+    //state = states.jump
+    global.counter ++;
 }
