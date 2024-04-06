@@ -15,6 +15,11 @@
     </sprites>
     <sprite>sprites\s_street</sprite>
     <sprite>sprites\s_milk</sprite>
+    <sprite>sprites\s_hit</sprite>
+    <sprite>sprites\sprite8</sprite>
+    <sprites name="s-reaper">
+      <sprite>sprites\s_reaper_idle</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -22,24 +27,28 @@
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
+    <path>paths\reaper</path>
   </paths>
   <scripts name="scripts">
-    <script>scripts\sc_input.gml</script>
-    <script>scripts\sc_idle.gml</script>
-    <script>scripts\sc_run.gml</script>
-    <script>scripts\sc_attack.gml</script>
-    <script>scripts\sc_jump.gml</script>
-    <script>scripts\script5.gml</script>
+    <scripts name="sc_boy">
+      <script>scripts\sc_input.gml</script>
+      <script>scripts\sc_idle.gml</script>
+      <script>scripts\sc_attack.gml</script>
+      <script>scripts\script5.gml</script>
+      <script>scripts\sc_jump.gml</script>
+      <script>scripts\sc_run.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\o_boy</object>
     <object>objects\o_solid</object>
     <object>objects\o_milk</object>
     <object>objects\o_damaged</object>
+    <object>objects\o_reaper</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_playing1_</room>
-    <room>rooms\room_playing_2</room>
+    <room>rooms\r_play_1</room>
+    <room>rooms\r_play_2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

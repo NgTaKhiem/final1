@@ -70,10 +70,11 @@ state = states.idle;
 
 //ABILITIES
 hp = 3;
-spd = 4;
+spd = 10;
 grv = 1;
 moveX = 0;
 moveY = 0;
+attackcount = 0;
 global.counter = 0;
 </string>
           </argument>
@@ -99,21 +100,23 @@ global.counter = 0;
             <kind>1</kind>
             <string>///CONTROLLER
 switch (state) {
-    case states.idle: ///sc_idle();
+    case states.idle:
+        sc_idle();
         break;
-    case states.run: ///sc_run();
+    case states.run:
+        sc_run();
         break;
-    case states.jump: ///sc_jump();
+    case states.jump:
+        sc_jump();
+        break;
+    case states.attack:
+        sc_attack();
         break;
 }
 
 ///SPRITE CONTROLLER
 var move = pressD - pressA;
-moveX = spd * move;
-
-if (move != 0) {
-    image_xscale = sign(move);
-}
+    moveX = spd * move;
 
 ///PHYSIC
 //GRAVITY
@@ -131,16 +134,21 @@ if(place_meeting(x , y + moveY , o_solid)){
         moveY = 0;
         global.counter = 0;
 }
+
 if(place_meeting(x + moveX , y , o_solid)){
     while(not place_meeting(x + sign(moveX), y , o_solid)){
         x += sign(moveX);
         }
         moveY = 0;
 }
+
 //APPlY movement
 x += moveX;
 y += moveY;
 
+if (move != 0) {
+    image_xscale = sign(move);
+}
 </string>
           </argument>
         </arguments>
