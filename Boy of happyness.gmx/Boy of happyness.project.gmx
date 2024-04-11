@@ -6,45 +6,58 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprites name="s_assasin">
-      <sprite>sprites\s_boy_idle</sprite>
-      <sprite>sprites\s_boy_run</sprite>
-      <sprite>sprites\s_boy_jump</sprite>
-      <sprite>sprites\s_boy_highjump</sprite>
-      <sprite>sprites\s_boy_attack</sprite>
+    <sprites name="enemies">
+      <sprites name="reaper">
+        <sprite>sprites\s_reaper_idle</sprite>
+        <sprite>sprites\s_reaper_attack</sprite>
+        <sprite>sprites\s_reaper_die</sprite>
+      </sprites>
+      <sprite>sprites\s_knight</sprite>
     </sprites>
-    <sprite>sprites\s_street</sprite>
-    <sprite>sprites\s_milk</sprite>
-    <sprite>sprites\s_hit</sprite>
-    <sprite>sprites\sprite8</sprite>
-    <sprites name="s-reaper">
-      <sprite>sprites\s_reaper_idle</sprite>
+    <sprites name="player">
+      <sprite>sprites\s_idle</sprite>
+      <sprite>sprites\s_jump</sprite>
+      <sprite>sprites\s_run</sprite>
+      <sprite>sprites\s_attack</sprite>
+    </sprites>
+    <sprites name="others">
+      <sprite>sprites\s_damage</sprite>
+      <sprite>sprites\s_solid</sprite>
+      <sprite>sprites\s_next</sprite>
+      <sprite>sprites\s_milk</sprite>
+      <sprite>sprites\s_reaper_bullet</sprite>
+      <sprite>sprites\s_spawn</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\background0</background>
-    <background>background\background1</background>
+    <background>background\til_main</background>
+    <background>background\bg_play</background>
   </backgrounds>
-  <paths name="paths">
-    <path>paths\path0</path>
-    <path>paths\reaper</path>
-  </paths>
+  <paths name="paths"/>
   <scripts name="scripts">
-    <scripts name="sc_boy">
-      <script>scripts\sc_input.gml</script>
-      <script>scripts\sc_idle.gml</script>
-      <script>scripts\sc_attack.gml</script>
-      <script>scripts\script5.gml</script>
-      <script>scripts\sc_jump.gml</script>
-      <script>scripts\sc_run.gml</script>
-    </scripts>
+    <script>scripts\scr_input.gml</script>
+    <script>scripts\scr_idle.gml</script>
+    <script>scripts\scr_run.gml</script>
+    <script>scripts\scr_jump.gml</script>
+    <script>scripts\scr_attack.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\o_boy</object>
-    <object>objects\o_solid</object>
-    <object>objects\o_milk</object>
-    <object>objects\o_damaged</object>
-    <object>objects\o_reaper</object>
+    <objects name="characters">
+      <object>objects\o_player</object>
+      <object>objects\o_reaper</object>
+      <object>objects\o_knight</object>
+    </objects>
+    <objects name="others">
+      <object>objects\o_solid</object>
+      <object>objects\o_checkpoint</object>
+      <object>objects\o_damage</object>
+      <object>objects\o_spawn_1</object>
+      <object>objects\o_spawn_2</object>
+      <object>objects\o_time</object>
+      <object>objects\o_next</object>
+      <object>objects\o_reaper_bullet</object>
+      <object>objects\o_milk</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_play_1</room>

@@ -2,13 +2,15 @@ sc_input();
 
 sprite_index = s_boy_jump;
 
-if (place_meeting(x , y + moveY, o_solid)) {
+if(place_meeting(x, y + moveY, o_solid)) {
     repeat(abs(moveY)) {
         if (!place_meeting(x, y + sign(moveY), o_solid)) {
             y += sign(moveY);
         }
-        break;
+            
+            break;
     }
+    
     state = states.idle;
 }
 
@@ -17,15 +19,15 @@ if (pressSpace) {
 }
 
 if (pressD) {
-    moveX = spd -1;
+    moveX = spd - 1
     if (pressSpace) {
-        state = states.attack;
-    }
+      state = states.attack;
+  
 }
-
 if (pressA) {
-    moveX = 1 - spd ;
-    if (pressSpace) {
-        state = states.attack;
-    }
+    moveX = spd - 1
+   if (pressSpace) {
+      state = states.attack;
+        }
+   }
 }

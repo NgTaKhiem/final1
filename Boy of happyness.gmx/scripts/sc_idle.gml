@@ -4,15 +4,12 @@ sprite_index = s_boy_idle;
 
 if (pressA or pressD) {
     state = states.run;
-} 
-else if (pressW and global.counter = 0){
-    moveY = -10;
-    global.counter ++;
-}
-else if (pressW and global.counter = 1){
-    moveY = -10;
-    //state = states.highjump;
-}
-else if (pressSpace) {
+//    audio_play_sound(sd_walk, 1, false);
+} else if (pressSpace) {
     state = states.attack;
+} else if (pressW and jumpCount < jumpMax) {
+      moveY -= 20;
+      jumpCount++;
+} else {
+    moveX = 0;
 }
