@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="1" enumb="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,10 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_message("Ready for the real battle");
+            <string>var spawn;
+spawn = 0;
+
 instance_create(0, 0, o_time);
 global.timer = 180;
 alarm[0] = 30;
+alarm[1] = 300;
+
+audio_stop_sound(sd_main);
+audio_play_sound(sd_main_2, 1, true);
 </string>
           </argument>
         </arguments>
@@ -52,7 +58,7 @@ alarm[0] = 30;
           <argument>
             <kind>1</kind>
             <string>instance_create(irandom(600) + 600, 160, o_milk);
-alarm[1] = 150;
+alarm[1] = 300;
 </string>
           </argument>
         </arguments>
@@ -76,20 +82,19 @@ alarm[1] = 150;
           <argument>
             <kind>1</kind>
             <string>if (global.kill == 60) {
-    instance_create(1984, 54, o_next);
-    instance_create(1216, 544, o_next);
+    instance_create(1984, 544, o_next);
+    instance_create(1984, 576, o_next);
+    audio_stop_sound(sd_main_2);
     exit;
 } else {
-    globalvar spawn;
     spawn = irandom(1) + 1;
     if (spawn == 1) {
-        instance_create(64, 565, o_knight);    
+        instance_create(64, 565, o_knight);
     } else {
-        instance_create(1984, 565, o_reaper);
+        instance_create(1984, 565, o_knight); 
     }
     
     alarm[0] = 30;
-    alarm[1] = 150;
 }
 
 

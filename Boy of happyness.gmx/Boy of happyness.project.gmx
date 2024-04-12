@@ -4,7 +4,13 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sd_win</sound>
+    <sound>sound\sd_lose</sound>
+    <sound>sound\sd_main</sound>
+    <sound>sound\sd_main_2</sound>
+    <sound>sound\sd_attack</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="enemies">
       <sprites name="reaper">
@@ -27,11 +33,16 @@
       <sprite>sprites\s_milk</sprite>
       <sprite>sprites\s_reaper_bullet</sprite>
       <sprite>sprites\s_spawn</sprite>
+      <sprite>sprites\s_play</sprite>
+      <sprite>sprites\s_win</sprite>
+      <sprite>sprites\s_again</sprite>
+      <sprite>sprites\s_lose</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\til_main</background>
     <background>background\bg_play</background>
+    <background>background\bg_lose</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -51,17 +62,25 @@
       <object>objects\o_solid</object>
       <object>objects\o_checkpoint</object>
       <object>objects\o_damage</object>
+      <object>objects\o_spawn</object>
       <object>objects\o_spawn_1</object>
       <object>objects\o_spawn_2</object>
       <object>objects\o_time</object>
       <object>objects\o_next</object>
       <object>objects\o_reaper_bullet</object>
       <object>objects\o_milk</object>
+      <object>objects\o_play</object>
+      <object>objects\o_win</object>
+      <object>objects\o_again</object>
+      <object>objects\o_lose</object>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\r_menu</room>
     <room>rooms\r_play_1</room>
     <room>rooms\r_play_2</room>
+    <room>rooms\r_win</room>
+    <room>rooms\r_lose</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

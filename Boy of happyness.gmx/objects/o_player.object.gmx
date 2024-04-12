@@ -190,10 +190,15 @@ if (x &gt; 2400) {
     x = 2350;
 }
 
-if (place_meeting(x, y, o_spawn_2)) {
-    with instance_place(x, y, o_spawn_2) {
+if (place_meeting(x, y, o_spawn)) {
+    instance_create(0, 0, o_spawn_2);
+    with instance_place(x, y, o_spawn) {
         instance_destroy();
     }
+}
+
+if ((global.hp &lt;= 0) || (global.timer == 0)) {
+    room_goto(r_lose);
 }
 </string>
           </argument>
@@ -219,7 +224,7 @@ if (place_meeting(x, y, o_spawn_2)) {
             <kind>1</kind>
             <string>draw_self();
 draw_healthbar(x - 30, y - 40, x + 30, y - 50, global.hp/global.hpMax * 100, c_black, c_red, c_lime, 0, true, true);
-draw_text(x - 40, y - 70, "Timer: " + string(global.timer));
+draw_text(x - 40, y - 70, "Time: " + string(global.timer));
 </string>
           </argument>
         </arguments>
